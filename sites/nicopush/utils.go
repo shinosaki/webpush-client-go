@@ -25,7 +25,7 @@ func NewLoginSession(userSession string) (*http.Client, error) {
 	jar.SetCookies(origin, []*http.Cookie{
 		{
 			Name:   "user_session",
-			Value:  "user_session_125600936_50e1b073aa6a9b7ce4065265c9ef89b7a1b6f8aeec322cb748551e2515682e73",
+			Value:  userSession,
 			Path:   "/",
 			Domain: ".nicovideo.jp",
 		},
