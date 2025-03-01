@@ -66,7 +66,7 @@ func NewNicoPushClient(
 // Handshake performs a handshake with the AutoPush server and retrieves a UAID.
 // The obtained UAID is used for client identification and should be saved.
 func (c *NicoPushClient) Handshake() (uaid string, err error) {
-	if err := c.autoPushClient.Connect(autopush.MOZILLA_PUSH_SERVICE, 3, 2); err != nil {
+	if err := c.autoPushClient.Connect(autopush.MOZILLA_PUSH_SERVICE, 3, 2, false); err != nil {
 		return "", fmt.Errorf("failed to connect autopush server: %v", err)
 	}
 
